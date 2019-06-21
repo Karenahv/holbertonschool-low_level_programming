@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+#include<stdlib.h>
 /**
  * main - Entry point
  *
@@ -15,7 +15,7 @@ int main(void)
 
 	for (ch = 0; ch <= 9; ch++)
 	{
-		for (j = 0; j <= 8; j++)
+		for (j = 0; j <= 9; j++)
 		{
 			for (i = ch; i <= 9; i++)
 			{
