@@ -8,17 +8,19 @@
  */
 long double main(void)
 {
-	long double fib1;
-	long double fib2;
-	long double fib3;
+	int fib1;
+	int fib2;
+	int fib3;
 	int n;
 
-	long double sum;
+	int sum;
+	int o;
 
 	n = 1;
 	fib1 = 1;
 	fib2 = 2;
 	sum = 3;
+	o = 2;
 
 	while (n <= 30)
 	{
@@ -26,8 +28,9 @@ long double main(void)
 		n++;
 		fib1 = fib2;
 		fib2 = fib3;
-		sum = sum + fib3;
+		if (fib3 % o == 0)
+			sum = sum + fib3;
 	}
-	printf("%.Lf\n", sum);
+	printf("%d\n", sum);
 	return (sum);
 }
