@@ -3,7 +3,7 @@
 /**
  * jack_bauer - Entry point
  *
- * Return: Always 0 (Success)
+ *not return
  */
 void jack_bauer(void)
 {
@@ -14,8 +14,10 @@ void jack_bauer(void)
 
 	for (ch = 0; ch <= 2; ch++)
 	{
-		for (j = 0; j <= 3; j++)
+		for (j = 0; j <= 9; j++)
 		{
+			if (ch == 2 && j == 4)
+				break;
 			for (i = 0; i <= 5; i++)
 			{
 				for (k = 0; k <= 9; k++)
