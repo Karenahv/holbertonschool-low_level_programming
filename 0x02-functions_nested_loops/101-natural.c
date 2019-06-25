@@ -1,4 +1,3 @@
-#include "holberton.h"
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -17,6 +16,6 @@ int main(void)
 		if ((i % 3 == 0) || (i % 5 == 0))
 			sum = sum + i;
 	}
-   printf("%d", sum);
-   putchar('\n');
+	printf("%d", sum);
+	putchar('\n');
 }
