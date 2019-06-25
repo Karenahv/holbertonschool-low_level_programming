@@ -14,7 +14,7 @@ int main(void)
 	int n;
 
 	n = 1;
-	fib1 = 0;
+	fib1 = 1;
 	fib2 = 1;
 	printf("%.Lf, ", fib2);
 	while (n <= 49)
