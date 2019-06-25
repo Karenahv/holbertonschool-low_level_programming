@@ -2,8 +2,8 @@
 
 /**
  * _islower - Entry point
- *
- * Return: 1 or 0 (Success)
+ *@c: character to chech
+ * Return: if character is lowercase returns 1 else 0
  */
 int _islower(int c)
 {
