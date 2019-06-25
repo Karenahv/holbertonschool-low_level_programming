@@ -2,8 +2,8 @@
 
 /**
  * _isalpha - Entry point
- *
- * Return: Always 0 (Success)
+ *@c: charater to check
+ * Return: if is lower or upper return 1 else 0
  */
 int _isalpha(int c)
 {
