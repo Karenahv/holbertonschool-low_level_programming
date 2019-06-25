@@ -2,8 +2,8 @@
 
 /**
  * _abs - Entry point
- *
- * Return: Always 0 (Success)
+ *@c: char to check
+ * Return: absolute value of a char
  */
 int _abs(int c)
 {
