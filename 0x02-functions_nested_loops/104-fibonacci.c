@@ -32,7 +32,7 @@ int main(void)
 		n++;
 		fib1 = fib2;
 		fib2 = fib3;
-		if(n > 90)
+		if (n > 90)
 		{
 			c = fib2 % (10 ^ 11);
 			a = (fib2 - c) / (10 ^ 11);
@@ -42,7 +42,7 @@ int main(void)
 			i = (sum0 % (10 ^ 11)) / (10 ^ 11);
 			sum1 = (a + b) - (i * (10 ^ 11));
 			sum2 = (c + d) + i;
-			printf ("%lu%lu", sum2, sum1);
+			printf("%lu%lu", sum2, sum1);
 			a = b;
 			c = d;
 			b = sum1;
