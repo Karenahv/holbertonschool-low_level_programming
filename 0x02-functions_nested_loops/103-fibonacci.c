@@ -6,7 +6,7 @@
  *
  * Return: Always 0 (Success)
  */
-long double main(void)
+int main(void)
 {
 	int fib1;
 	int fib2;
@@ -19,7 +19,7 @@ long double main(void)
 	n = 1;
 	fib1 = 1;
 	fib2 = 2;
-	sum = 3;
+	sum = 2;
 	o = 2;
 
 	while (n <= 30)
@@ -32,5 +32,5 @@ long double main(void)
 			sum = sum + fib3;
 	}
 	printf("%d\n", sum);
-	return (sum);
+	return (0);
 }
