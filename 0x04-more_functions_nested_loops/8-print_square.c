@@ -2,7 +2,7 @@
 
 /**
  * print_square - Entry point
- *@size: size of square
+ * @size: size of square
  * Return: no return
  */
 void print_square(int size)
