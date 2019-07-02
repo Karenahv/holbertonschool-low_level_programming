@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- *swap-int - Entry point
+ *swap_int - Entry point
  *@a: pointer the integer we want to swap
  *@b: pointer the integer we want to swap
  *
