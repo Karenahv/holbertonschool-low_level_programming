@@ -2,7 +2,7 @@
 
 /**
  * print_rev - Entry point
- * @*s: pointer the string we want to reverse and print
+ * @s: pointer the string we want to reverse and print
  *
  * Return: no return
  */
@@ -16,9 +16,9 @@ void print_rev(char *s)
 		i++;
 	}
 
-	while (i >= 0)
+	while (i > 0)
 	{
-		_putchar(*(s + i));
+		_putchar(*(s + i - 1));
 		i--;
 
 	}
