@@ -1,10 +1,9 @@
 #include "holberton.h"
 
 /**
- * rev_string - Entry point
- * @*s: pointer the string we want to change
- *
- * Return: no return
+ *rev_string - Entry point
+ *@s: pointer the string we want to change
+ *Return: no return
  */
 void rev_string(char *s)
 {
@@ -22,15 +21,14 @@ void rev_string(char *s)
 	while (*(s + j) != '\0')
 	{
 
-	        gua[j] = *(s + j);
+		gua[j] = *(s + j);
 		j++;
 	}
 
 	j = 0;
 	while (i > 0)
 	{
-
-	      s[j] = gua[i-1];
+		s[j] = gua[i - 1];
 		i--;
 		j++;
 
