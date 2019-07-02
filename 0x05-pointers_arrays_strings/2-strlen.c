@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * swap-int - Entry point
+ * _strlen - Entry point
  *@s: pointer the string we want to now length
  *
  * Return: 0
