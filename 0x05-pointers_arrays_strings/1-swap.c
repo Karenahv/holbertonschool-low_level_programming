@@ -1,10 +1,11 @@
 #include "holberton.h"
 
 /**
- * swap-int - Entry point
+ *swap-int - Entry point
  *@a: pointer the integer we want to swap
  *@b: pointer the integer we want to swap
- * Return: nothing
+ *
+ *Return: no return
  */
 void swap_int(int *a, int *b)
 {
