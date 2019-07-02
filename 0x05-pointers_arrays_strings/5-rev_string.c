@@ -26,11 +26,10 @@ void rev_string(char *s)
 	}
 
 	j = 0;
-	while (i > 0)
+	while (i >= 0)
 	{
 		s[j] = gua[i - 1];
 		i--;
 		j++;
-
 	}
 }
