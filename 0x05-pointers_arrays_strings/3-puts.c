@@ -2,9 +2,8 @@
 
 /**
  * _puts - Entry point
- * @*str: pointer the sstring we want to print
- *
- * Return: 0
+ * @str: pointer the sstring we want to print
+ *Return: no return
  */
 void _puts(char *str)
 {
