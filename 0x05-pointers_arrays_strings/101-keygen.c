@@ -1,42 +1,28 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
 * main - Entry point
-*@n: the integer to print
- * Return: no return
- */
- unsigned long checksum(char *p)
+* Return: return 0
+*/
+int main(void)
  {
-	 unsigned long suma = 0;
-	 while (*p != 0)
-	 {
-                suma += *p;
-                p++;
-	 }
-	 return suma;
-	 }
+	 int contador;
+	 int  checksum;
+	 int  aleatorio;
 
-int main(int c, char *v[])
-{
-	unsigned long suma;
+	srand(time(NULL));
+	checksum = 2772;
+	contador = 0;
 
-	if (c < 2)
+	while (checksum > 122)
 	{
-		printf("usage %s password", v[0]);
-		return (1);
+		aleatorio = (rand() % 100);
+		printf("%c", aleatorio);
+		checksum -= aleatorio;
+		contador++;
 	}
-        else
-	{
-		suma = checksum(v[1]);
-		printf("%lu, suma");
-
-		if( suma != 2772)
-		{
-			puts("wrong password");
-			return (1);
-		}
-                else
-			puts(v[1]);
-        }
+	printf("%c", checksum);
         return 0;
-}
+ }
