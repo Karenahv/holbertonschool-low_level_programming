@@ -3,7 +3,7 @@
 
 /**
  *string_toupper - String to Uppercase
- *@*: pointer the string we want to reverse
+ *@p: pointer the string we want to change
  *Return: string
  */
 char *string_toupper(char *p)
