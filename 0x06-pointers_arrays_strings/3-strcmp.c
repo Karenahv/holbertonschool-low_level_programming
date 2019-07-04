@@ -11,6 +11,7 @@ int _strcmp(char *s1, char *s2)
 {
 	int j;
 	int entero;
+
 	entero = 0;
 	for (j = 0; s1[j] != '\0'; j++)
 	{
