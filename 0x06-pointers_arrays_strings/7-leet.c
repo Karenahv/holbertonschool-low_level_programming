@@ -14,7 +14,7 @@ char *leet(char *p)
 
 	for (j = 0; p[j] != '\0'; j++)
 	{
-		for (i = 0; i < 9; i++)
+		for (i = 0; i <= 9; i++)
 		{
 			if (p[j] == a1[i])
 				p[j] = a2[i];
