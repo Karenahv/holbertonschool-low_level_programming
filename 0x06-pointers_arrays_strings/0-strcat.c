@@ -1,0 +1,24 @@
+#include "holberton.h"
+
+/**
+ *_strcat - concatenates two strings
+ *@dest: pointer for the first string we want to change
+ *@src: pointer  for the second string
+ *
+ *Return: the new string
+ */
+char *_strcat(char *dest, char *src)
+{
+	int longdest;
+	int i;
+	int j;
+
+	for (longdest = 0; dest[longdest] != '\0'; longdest++)
+	j = 0;
+	for (i = longdest; src[j] != '\0'; i++)
+	{
+		dest[i] = src[j];
+		j++;
+	}
+	return (&(*dest));
+}
