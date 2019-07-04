@@ -20,6 +20,8 @@ char *cap_string(char *p)
 			p[j + 1] = p[j + 1] - 32;
 		j++;
 	}
+	if (p[0] >= 'a' && p[0] <= 'z')
+		p[0] = p[0] - 32;
 
 	return (p);
 }
