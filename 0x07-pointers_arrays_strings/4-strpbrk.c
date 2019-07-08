@@ -14,6 +14,7 @@ char *_strpbrk(char *s, char *accept)
 	unsigned int j;
 	unsigned int ls;
 	unsigned int la;
+	char *add = NULL;
 
 	for (ls = 0; s[ls] != '\0'; ls++)
 	{
@@ -21,16 +22,18 @@ char *_strpbrk(char *s, char *accept)
 	for (la = 0; accept[la] != '\0'; la++)
 	{
 	}
-	for (i = 0; i < ls - 1; i++)
+	for (i = 0; i < la - 1; i++)
 	{
-		for (j = 0; j < la - 1; j++)
+		for (j = 0; j < ls - 1; j++)
 		{
-			if (s[i] == accept[j])
-				return (&(s[i]));
+			if (s[j] == accept[i])
+			{
+				if (add == NULL)
+					add = &(s[j]);
+				if (&(s[j]) < add)
+					add = &(s[j]);
+			}
 		}
 	}
-	if (i < ls)
-		return (&(s[i]));
-	else
-		return ('\0');
+	return (add);
 }
