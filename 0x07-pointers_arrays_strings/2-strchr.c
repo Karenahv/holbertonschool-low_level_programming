@@ -11,18 +11,13 @@
 char *_strchr(char *s, char c)
 {
 	unsigned int i;
-	unsigned int ls;
 
-	for (ls = 0; s[ls] != '\0'; ls++)
-	{
-	}
-	for (i = 0; i < ls; i++)
+	for (; ; i++)
 	{
 		if (s[i] == c)
-			break;
+			return (&(s[i]));
+		if (!s[i])
+			return NULL;
+
 	}
-	if (i < ls)
-		return (&(s[i]));
-	else
-		return NULL;
 }
