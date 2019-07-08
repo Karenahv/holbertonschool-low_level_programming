@@ -12,19 +12,11 @@ char *_strpbrk(char *s, char *accept)
 {
 	unsigned int i;
 	unsigned int j;
-	unsigned int ls;
-	unsigned int la;
 	char *add = NULL;
 
-	for (ls = 0; s[ls] != '\0'; ls++)
+	for (i = 0; accept[i] != '\0'; i++)
 	{
-	}
-	for (la = 0; accept[la] != '\0'; la++)
-	{
-	}
-	for (i = 0; i < la - 1; i++)
-	{
-		for (j = 0; j < ls - 1; j++)
+		for (j = 0; s[j] != '\0'; j++)
 		{
 			if (s[j] == accept[i])
 			{
