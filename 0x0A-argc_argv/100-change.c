@@ -35,7 +35,10 @@ int main(int argc, char *argv[])
 		for (j = 0; j <= 4; j++)
 		{
 			if (count >= coins[j])
+			{
 				monedas++;
+				count = count - coins[j];
+			}
 		}
 	}
 	if (argc == 1)
