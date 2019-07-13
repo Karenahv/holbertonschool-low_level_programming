@@ -14,10 +14,9 @@ int main(int argc, char *argv[])
 	int count;
 	int coins[5] = {25, 10, 5, 2, 1};
 
-
-	(void)argv;
 	count = 0;
 	monedas = 0;
+
 	if (argc == 2)
 	{
 		for (j = 0; j <= 4; j++)
@@ -38,8 +37,7 @@ int main(int argc, char *argv[])
 				count = count - coins[j];
 			}
 		}
-	}
-	if (argc == 1 || argc > 2)
+	} else
 	{
 		printf("Error\n");
 		return (1);
