@@ -20,8 +20,6 @@ int main(int argc, char *argv[])
 	monedas = 0;
 	if (argc == 2)
 	{
-		if (atoi(argv[1]) == 0)
-			return (1);
 		for (j = 0; j <= 4; j++)
 		{
 			if (atoi(argv[1]) >= coins[j])
