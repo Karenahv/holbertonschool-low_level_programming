@@ -35,6 +35,7 @@ int main(int argc, char *argv[])
 			{
 				monedas++;
 				count = count - coins[j];
+				j = 0;
 			}
 		}
 	} else
