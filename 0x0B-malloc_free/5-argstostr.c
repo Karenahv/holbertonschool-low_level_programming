@@ -41,16 +41,14 @@ char *argstostr(int ac, char **av)
 	ncount = 0;
 	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; av[j] != '\0' && ncount != ac; j++)
+		for (j = 0; av[i][j] != '\0'; j++)
 		{
 			p[k] = av[i][j];
 			k++;
-			if (av[i][j] == '\0')
-			{
-				ncount++;
-				p[k] = '\n';
-			}
 		}
+		p[k] = '\n';
+		k++;
 	}
+	p[k] = '\0';
 	return (p);
 }
