@@ -12,11 +12,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *strnew = NULL;
-	unsigned int i;
-	unsigned int n1;
-	unsigned int n2, j;
-	unsigned int count;
-	unsigned int palabras;
+	unsigned int i, n1, n2, j, count, palabras;
 
 	count = 0;
 	palabras = 0;
