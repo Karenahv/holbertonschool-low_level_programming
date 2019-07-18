@@ -13,7 +13,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	char *array = NULL;
 	char *p = NULL;
-	int i, t;
+	int i;
 	char *px = NULL;
 
 	if (ptr == NULL)
@@ -33,9 +33,8 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	p = malloc(new_size);
 	if (p != NULL)
 	{
-		t = new_size;
 		px = (char *)ptr;
-		for (i = 0; i < t; i++)
+		for (i = 0; i < old_size; i++)
 			p[i] = px[i];
 		free(ptr);
 		return (p);
