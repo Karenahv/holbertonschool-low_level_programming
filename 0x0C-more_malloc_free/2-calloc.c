@@ -3,10 +3,10 @@
 #include <stdlib.h>
 
 /**
- * alloc_grid - Entry point
- *@width: rows of matrix
- *@height: columns of string
- * Return: a pointer to a 2 dimensional array of integers or null
+ * _calloc - Entry point
+ *@nmemb: size of the array
+ *@size: size of the type
+ * Return: a pointer to an array
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
@@ -25,8 +25,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		for (i = 0; i < t; i++)
 			f[i] = 0;
 		return (f);
-	} else
-	{
-		return (NULL);
 	}
+	return (NULL);
 }
