@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "3-calc.h"
+#include "function_pointers.h"
 
 /**
  * main - searchs for an integer
@@ -35,7 +36,11 @@ int main(int argc, char *argv[])
 		result = (*get_op_func(argv[2]))(num1, num2);
 		printf("%d\n", result);
 
-	}
+	} else
+	{
 
+		printf("Error\n");
+		exit(99);
+	}
 	return (0);
 }
