@@ -52,7 +52,10 @@ void t_string(va_list va)
 	char *s = va_arg(va, char *);
 
 	if (s == NULL)
+	{
 		printf("(nil)");
+		return;
+	}
 	printf("%s", s);
 }
 
@@ -78,7 +81,7 @@ void print_all(const char * const format, ...)
 	i = 0;
 	count = 0;
 	va_start(valist, format);
-	while (format[i])
+	while (format != NULL && format[i])
 	{
 		j = 0;
 		while (j < 4)
