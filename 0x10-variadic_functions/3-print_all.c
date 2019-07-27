@@ -51,10 +51,9 @@ void t_string(va_list va)
 {
 	char *s = va_arg(va, char *);
 
-	if (s != NULL)
-		printf("%s", s);
-	else
-		printf("nil");
+	if (s == NULL)
+		printf("(nil)");
+	printf("%s", s);
 }
 
 
@@ -74,6 +73,7 @@ void print_all(const char * const format, ...)
 		{'f', t_float},
 		{'s', t_string},
 		};
+	char *s = "";
 
 	i = 0;
 	count = 0;
@@ -85,9 +85,9 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == difftypes[j].t)
 			{
-				if (count != 0)
-					printf(", ");
+				printf("%s", s);
 				difftypes[j].f(valist);
+				s = ", ";
 				count++;
 				break;
 			}
