@@ -9,9 +9,9 @@ void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 
 /**
- * struct op - Struct op
+ * struct types_arguments - Struct op
  *
- * @op: The operator
+ * @t: The operator
  * @f: The function associated
  */
 typedef struct types_arguments
