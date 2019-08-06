@@ -20,8 +20,16 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	i = 0;
 	temp = (struct listint_s *)malloc(sizeof(struct listint_s));
 	new = (struct listint_s *)malloc(sizeof(struct listint_s));
-	if (*head ==  NULL || temp == NULL || new == NULL)
+	if (*head ==  NULL || new == NULL || temp == NULL)
 		return (NULL);
+	if (idx == 0)
+	{
+		temp->n = n;
+		temp->next = *head;
+		*head = temp;
+		return (temp);
+	}
+
 	temp = *head;
 	new->n = n;
 	while (i <= idx)
