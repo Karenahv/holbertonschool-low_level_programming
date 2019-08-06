@@ -20,7 +20,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	i = 0;
 	temp = (struct listint_s *)malloc(sizeof(struct listint_s));
 	new = (struct listint_s *)malloc(sizeof(struct listint_s));
-	if (*head ==  NULL || new == NULL || head == NULL || temp == NULL)
+	if (new == NULL || head == NULL || temp == NULL)
 		return (NULL);
 	if (idx == 0)
 	{
