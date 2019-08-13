@@ -26,24 +26,24 @@ int main(int argc, char *argv[])
 	fd = open(argv[1], O_RDWR);
 	if (fd == -1)
 	{
-		dprintf(2, "Error: Can't read from file %s", argv[1]);
+		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 		exit(98); }
 	fd2 = open(argv[2], O_CREAT | O_TRUNC | O_RDWR, 0664);
 	if (fd2 == -1)
 	{
-		dprintf(2, "Error: Can't write to %s", argv[2]);
+		dprintf(2, "Error: Can't write to %s\n", argv[2]);
 		exit(99); }
 	while (sz == 1024)
 	{
 		sz = read(fd, buf, 1024);
 		if (sz == -1)
 		{
-			dprintf(2, "Error: Can't read from file %s", argv[1]);
+			dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 			exit(98); }
 		w = write(fd2, buf, sz);
 		if (w == -1)
 		{
-			dprintf(2, "Error: Can't write to %s", argv[2]);
+			dprintf(2, "Error: Can't write to %s\n", argv[2]);
 			exit(99); }}
 	if (close(fd) < 0)
 	{
