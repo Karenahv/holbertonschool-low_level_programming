@@ -8,7 +8,7 @@ all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 .PHONY: clean
 clean:
-	$(RM) *~
+	$(RM) *~ $(NAME)
 oclean:
 	$(RM) $(OBJ)
 fclean:
