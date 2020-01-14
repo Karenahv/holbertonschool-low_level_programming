@@ -9,6 +9,7 @@
  * @array: pointer to the array
  * @size: size of the array
  * @value: value to search
+ * @imin: index
  * Return: the pointer to a new node at the beginning of a dlistint_t list
  */
 int linear_search2(int *array, size_t size, int value, int imin)
@@ -38,8 +39,7 @@ int linear_search2(int *array, size_t size, int value, int imin)
 int jump_search(int *array, size_t size, int value)
 {
 	size_t i = 0;
-	int jump = 0,  imax = 0, imin = 0, j = 0, z = 0, idxanterior = 0;
-	int array2[500];
+	int jump = 0,  imax = 0, imin = 0, j = 0, z = 0, idxanterior = 0, array2[500];
 
 	if (array == NULL)
 		return (-1);
@@ -54,40 +54,27 @@ int jump_search(int *array, size_t size, int value)
 			{
 				imax = i + jump;
 				imin = i;
-				z = imin;
-			}
-			else
+				z = imin; } else
 			{
 				imax = i;
 				imin = idxanterior;
-				z = imin;
-			}
+				z = imin; }
 			if (i == size - 1)
 			{
 				for (j = 0; j < imin; j++)
 				{
 					array2[j] = array[z];
-					z = z + 1; 
-				}
-			} 
-			else
+					z = z + 1; }} else
 			{
 				for (j = 0; j < imax; j++)
-				{
-					array2[j] = array[z];
-					z = z + 1;
-				}
-			}
+				{ array2[j] = array[z];
+					z = z + 1; }}
 			if (i == size - 1)
-			{
-				printf("Value found between indexes [%d] and [%d]\n", imin, imax);
-				return (linear_search2(array2, 1, value, imin)); 
-			}
+			{ printf("Value found between indexes [%d] and [%d]\n", imin, imax);
+				return (linear_search2(array2, 1, value, imin)); }
 			printf("Value found between indexes [%d] and [%d]\n", imin, imax);
-			return (linear_search2(array2, jump + 1, value, imin));
-		}
+			return (linear_search2(array2, jump + 1, value, imin)); }
 		idxanterior = i;
-		i = i + jump;
-	}
+		i = i + jump; }
 	return (-1);
 }
