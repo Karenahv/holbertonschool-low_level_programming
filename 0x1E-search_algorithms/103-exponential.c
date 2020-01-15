@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "search_algos.h"
-#include <math.h>
 
 /**
  * exponential_search - searches for a value in a array of integers.
